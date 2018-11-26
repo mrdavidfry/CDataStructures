@@ -1,0 +1,22 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/dave/CSplayTree/SplayTree.h
+stdbool.h
+-
+
+/home/dave/CSplayTree/SplayTreeTests.c
+assert.h
+-
+stdio.h
+-
+malloc.h
+-
+SplayTree.h
+/home/dave/CSplayTree/SplayTree.h
+

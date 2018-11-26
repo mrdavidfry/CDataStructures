@@ -1,0 +1,1 @@
+/usr/bin/cc -g   CMakeFiles/CSplayTree.dir/SplayTree.c.o CMakeFiles/CSplayTree.dir/SplayTreeTests.c.o  -o CSplayTree 
