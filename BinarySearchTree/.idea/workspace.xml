@@ -191,7 +191,7 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Tests/BSTTests.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="4905">
+            <state relative-caret-position="-2228">
               <caret line="327" column="23" selection-start-line="327" selection-start-column="23" selection-end-line="327" selection-end-column="23" />
               <folding>
                 <element signature="e#1#19#0" expanded="true" />
@@ -390,7 +390,7 @@
       <workItem from="1543663134509" duration="4769000" />
       <workItem from="1543667934712" duration="21000" />
       <workItem from="1543667981803" duration="1751000" />
-      <workItem from="1543673715803" duration="8989000" />
+      <workItem from="1543673715803" duration="9234000" />
     </task>
     <servers />
   </component>
@@ -427,7 +427,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="15530000" />
+    <option name="totallyTimeSpent" value="15775000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="22" width="1920" height="1034" extended-state="6" />
@@ -543,7 +543,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Tests/BSTTests.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4905">
+        <state relative-caret-position="-2228">
           <caret line="327" column="23" selection-start-line="327" selection-start-column="23" selection-end-line="327" selection-end-column="23" />
           <folding>
             <element signature="e#1#19#0" expanded="true" />
