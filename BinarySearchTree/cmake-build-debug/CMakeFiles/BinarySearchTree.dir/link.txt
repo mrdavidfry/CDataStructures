@@ -1,0 +1,1 @@
+/usr/bin/cc -g   CMakeFiles/BinarySearchTree.dir/BST.c.o CMakeFiles/BinarySearchTree.dir/Main.c.o  -o BinarySearchTree 
