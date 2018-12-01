@@ -43,10 +43,10 @@ RM = /usr/lib/clion-2018.2.2/bin/cmake/linux/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /homes/df4517/BinarySearchTree
+CMAKE_SOURCE_DIR = /homes/df4517/CDataStructures/BinarySearchTree
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /homes/df4517/BinarySearchTree/cmake-build-debug
+CMAKE_BINARY_DIR = /homes/df4517/CDataStructures/BinarySearchTree/cmake-build-debug
 
 # Include any dependencies generated for this target.
 include CMakeFiles/BinarySearchTree.dir/depend.make
@@ -59,43 +59,61 @@ include CMakeFiles/BinarySearchTree.dir/flags.make
 
 CMakeFiles/BinarySearchTree.dir/BST.c.o: CMakeFiles/BinarySearchTree.dir/flags.make
 CMakeFiles/BinarySearchTree.dir/BST.c.o: ../BST.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/homes/df4517/BinarySearchTree/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/BinarySearchTree.dir/BST.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/BinarySearchTree.dir/BST.c.o   -c /homes/df4517/BinarySearchTree/BST.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/homes/df4517/CDataStructures/BinarySearchTree/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/BinarySearchTree.dir/BST.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/BinarySearchTree.dir/BST.c.o   -c /homes/df4517/CDataStructures/BinarySearchTree/BST.c
 
 CMakeFiles/BinarySearchTree.dir/BST.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/BinarySearchTree.dir/BST.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /homes/df4517/BinarySearchTree/BST.c > CMakeFiles/BinarySearchTree.dir/BST.c.i
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /homes/df4517/CDataStructures/BinarySearchTree/BST.c > CMakeFiles/BinarySearchTree.dir/BST.c.i
 
 CMakeFiles/BinarySearchTree.dir/BST.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/BinarySearchTree.dir/BST.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /homes/df4517/BinarySearchTree/BST.c -o CMakeFiles/BinarySearchTree.dir/BST.c.s
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /homes/df4517/CDataStructures/BinarySearchTree/BST.c -o CMakeFiles/BinarySearchTree.dir/BST.c.s
 
-CMakeFiles/BinarySearchTree.dir/Main.c.o: CMakeFiles/BinarySearchTree.dir/flags.make
-CMakeFiles/BinarySearchTree.dir/Main.c.o: ../Main.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/homes/df4517/BinarySearchTree/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object CMakeFiles/BinarySearchTree.dir/Main.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/BinarySearchTree.dir/Main.c.o   -c /homes/df4517/BinarySearchTree/Main.c
+CMakeFiles/BinarySearchTree.dir/Tests/Main.cpp.o: CMakeFiles/BinarySearchTree.dir/flags.make
+CMakeFiles/BinarySearchTree.dir/Tests/Main.cpp.o: ../Tests/Main.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/homes/df4517/CDataStructures/BinarySearchTree/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/BinarySearchTree.dir/Tests/Main.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/BinarySearchTree.dir/Tests/Main.cpp.o -c /homes/df4517/CDataStructures/BinarySearchTree/Tests/Main.cpp
 
-CMakeFiles/BinarySearchTree.dir/Main.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/BinarySearchTree.dir/Main.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /homes/df4517/BinarySearchTree/Main.c > CMakeFiles/BinarySearchTree.dir/Main.c.i
+CMakeFiles/BinarySearchTree.dir/Tests/Main.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/BinarySearchTree.dir/Tests/Main.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /homes/df4517/CDataStructures/BinarySearchTree/Tests/Main.cpp > CMakeFiles/BinarySearchTree.dir/Tests/Main.cpp.i
 
-CMakeFiles/BinarySearchTree.dir/Main.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/BinarySearchTree.dir/Main.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /homes/df4517/BinarySearchTree/Main.c -o CMakeFiles/BinarySearchTree.dir/Main.c.s
+CMakeFiles/BinarySearchTree.dir/Tests/Main.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/BinarySearchTree.dir/Tests/Main.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /homes/df4517/CDataStructures/BinarySearchTree/Tests/Main.cpp -o CMakeFiles/BinarySearchTree.dir/Tests/Main.cpp.s
+
+CMakeFiles/BinarySearchTree.dir/Tests/BSTTests.cpp.o: CMakeFiles/BinarySearchTree.dir/flags.make
+CMakeFiles/BinarySearchTree.dir/Tests/BSTTests.cpp.o: ../Tests/BSTTests.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/homes/df4517/CDataStructures/BinarySearchTree/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/BinarySearchTree.dir/Tests/BSTTests.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/BinarySearchTree.dir/Tests/BSTTests.cpp.o -c /homes/df4517/CDataStructures/BinarySearchTree/Tests/BSTTests.cpp
+
+CMakeFiles/BinarySearchTree.dir/Tests/BSTTests.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/BinarySearchTree.dir/Tests/BSTTests.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /homes/df4517/CDataStructures/BinarySearchTree/Tests/BSTTests.cpp > CMakeFiles/BinarySearchTree.dir/Tests/BSTTests.cpp.i
+
+CMakeFiles/BinarySearchTree.dir/Tests/BSTTests.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/BinarySearchTree.dir/Tests/BSTTests.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /homes/df4517/CDataStructures/BinarySearchTree/Tests/BSTTests.cpp -o CMakeFiles/BinarySearchTree.dir/Tests/BSTTests.cpp.s
 
 # Object files for target BinarySearchTree
 BinarySearchTree_OBJECTS = \
 "CMakeFiles/BinarySearchTree.dir/BST.c.o" \
-"CMakeFiles/BinarySearchTree.dir/Main.c.o"
+"CMakeFiles/BinarySearchTree.dir/Tests/Main.cpp.o" \
+"CMakeFiles/BinarySearchTree.dir/Tests/BSTTests.cpp.o"
 
 # External object files for target BinarySearchTree
 BinarySearchTree_EXTERNAL_OBJECTS =
 
 BinarySearchTree: CMakeFiles/BinarySearchTree.dir/BST.c.o
-BinarySearchTree: CMakeFiles/BinarySearchTree.dir/Main.c.o
+BinarySearchTree: CMakeFiles/BinarySearchTree.dir/Tests/Main.cpp.o
+BinarySearchTree: CMakeFiles/BinarySearchTree.dir/Tests/BSTTests.cpp.o
 BinarySearchTree: CMakeFiles/BinarySearchTree.dir/build.make
+BinarySearchTree: lib/libgtestd.a
+BinarySearchTree: lib/libgtest_maind.a
+BinarySearchTree: lib/libgtestd.a
 BinarySearchTree: CMakeFiles/BinarySearchTree.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/homes/df4517/BinarySearchTree/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking C executable BinarySearchTree"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/homes/df4517/CDataStructures/BinarySearchTree/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking CXX executable BinarySearchTree"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/BinarySearchTree.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -108,6 +126,6 @@ CMakeFiles/BinarySearchTree.dir/clean:
 .PHONY : CMakeFiles/BinarySearchTree.dir/clean
 
 CMakeFiles/BinarySearchTree.dir/depend:
-	cd /homes/df4517/BinarySearchTree/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /homes/df4517/BinarySearchTree /homes/df4517/BinarySearchTree /homes/df4517/BinarySearchTree/cmake-build-debug /homes/df4517/BinarySearchTree/cmake-build-debug /homes/df4517/BinarySearchTree/cmake-build-debug/CMakeFiles/BinarySearchTree.dir/DependInfo.cmake --color=$(COLOR)
+	cd /homes/df4517/CDataStructures/BinarySearchTree/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /homes/df4517/CDataStructures/BinarySearchTree /homes/df4517/CDataStructures/BinarySearchTree /homes/df4517/CDataStructures/BinarySearchTree/cmake-build-debug /homes/df4517/CDataStructures/BinarySearchTree/cmake-build-debug /homes/df4517/CDataStructures/BinarySearchTree/cmake-build-debug/CMakeFiles/BinarySearchTree.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/BinarySearchTree.dir/depend
 

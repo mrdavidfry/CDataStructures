@@ -3,15 +3,15 @@
 #include <malloc.h>
 #include <assert.h>
 
-/* Returns a new malloc-ed BST with the root node storing value. */
-struct BST *create_tree(int value) {
+/* Returns a new malloc-ed BST with a NULL root. */
+struct BST *create_tree() {
   struct BST *tree = (struct BST *) malloc(sizeof(struct BST));
   if (!tree) {
     printf("In create_tree: Malloc failed!\n");
     return NULL;
   }
-  tree->root = create_node(value, NULL);
-  tree->stored_nodes = 1;
+  tree->root = NULL;
+  tree->stored_nodes = 0;
   return tree;
 }
 
@@ -50,7 +50,6 @@ void insert_node(struct BST *tree, int value) {
         new_node = create_node(value, prev);
         set_left_child(prev, new_node);
         tree->stored_nodes++;
-        printf("Node inserted, value: %d, parent: %d\n", new_node->value, prev->value);
       }
     } else if (value > cur_node_value) { // search right case
       cur = cur->right;
@@ -58,7 +57,6 @@ void insert_node(struct BST *tree, int value) {
         new_node = create_node(value, prev);
         set_right_child(prev, new_node);
         tree->stored_nodes++;
-        printf("Node inserted, value: %d, parent: %d\n", new_node->value, prev->value);
       }
     } else { // found node already
 
@@ -94,7 +92,6 @@ void remove_node(struct BST *tree, int value) {
 
   struct node *node = find_node(tree, value);
   if (!node) { // value not found
-    printf("Node with value: %d not found!\n", value);
     return;
   }
 
@@ -122,10 +119,14 @@ void remove_node(struct BST *tree, int value) {
     struct node *right_sub_root = node->right;
     set_left_child(new_sub_root, left_sub_root);
     set_right_child(new_sub_root, right_sub_root);
+
+    if (node_equals(tree->root, node)) { // root node case
+      tree->root = new_sub_root;
+    }
   }
+
   destroy_node(node);
   tree->stored_nodes--;
-  printf("Node deleted!\n");
 }
 
 /* Returns the minimum node in a given tree.

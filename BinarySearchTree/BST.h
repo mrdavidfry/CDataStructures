@@ -1,9 +1,7 @@
-#include <stdbool.h>
-
 #ifndef BINARYSEARCHTREE_BST_H
 #define BINARYSEARCHTREE_BST_H
 
-#endif //BINARYSEARCHTREE_BST_H
+#include <stdbool.h>
 
 struct node {
   struct node *left;
@@ -17,7 +15,7 @@ struct BST {
   int stored_nodes;
 };
 
-struct BST *create_tree(int value);
+struct BST *create_tree();
 struct node *create_node(int value, struct node *parent);
 
 void insert_node(struct BST *tree, int value);
@@ -45,3 +43,5 @@ bool is_right_of_parent(struct node *node);
 void destroy_node(struct node *node);
 void delete_subtree(struct node *subtree_node);
 void delete_tree(struct BST *tree);
+
+#endif BINARYSEARCHTREE_BST_H

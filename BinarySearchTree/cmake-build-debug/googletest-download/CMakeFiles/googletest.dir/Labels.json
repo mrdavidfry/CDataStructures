@@ -1,0 +1,46 @@
+{
+	"sources" : 
+	[
+		{
+			"file" : "/homes/df4517/CDataStructures/BinarySearchTree/cmake-build-debug/googletest-download/CMakeFiles/googletest"
+		},
+		{
+			"file" : "/homes/df4517/CDataStructures/BinarySearchTree/cmake-build-debug/googletest-download/CMakeFiles/googletest.rule"
+		},
+		{
+			"file" : "/homes/df4517/CDataStructures/BinarySearchTree/cmake-build-debug/googletest-download/CMakeFiles/googletest-complete.rule"
+		},
+		{
+			"file" : "/homes/df4517/CDataStructures/BinarySearchTree/cmake-build-debug/googletest-download/googletest-prefix/src/googletest-stamp/googletest-install.rule"
+		},
+		{
+			"file" : "/homes/df4517/CDataStructures/BinarySearchTree/cmake-build-debug/googletest-download/googletest-prefix/src/googletest-stamp/googletest-mkdir.rule"
+		},
+		{
+			"file" : "/homes/df4517/CDataStructures/BinarySearchTree/cmake-build-debug/googletest-download/googletest-prefix/src/googletest-stamp/googletest-download.rule"
+		},
+		{
+			"file" : "/homes/df4517/CDataStructures/BinarySearchTree/cmake-build-debug/googletest-download/googletest-prefix/src/googletest-stamp/googletest-update.rule"
+		},
+		{
+			"file" : "/homes/df4517/CDataStructures/BinarySearchTree/cmake-build-debug/googletest-download/googletest-prefix/src/googletest-stamp/googletest-patch.rule"
+		},
+		{
+			"file" : "/homes/df4517/CDataStructures/BinarySearchTree/cmake-build-debug/googletest-download/googletest-prefix/src/googletest-stamp/googletest-configure.rule"
+		},
+		{
+			"file" : "/homes/df4517/CDataStructures/BinarySearchTree/cmake-build-debug/googletest-download/googletest-prefix/src/googletest-stamp/googletest-build.rule"
+		},
+		{
+			"file" : "/homes/df4517/CDataStructures/BinarySearchTree/cmake-build-debug/googletest-download/googletest-prefix/src/googletest-stamp/googletest-test.rule"
+		}
+	],
+	"target" : 
+	{
+		"labels" : 
+		[
+			"googletest"
+		],
+		"name" : "googletest"
+	}
+}

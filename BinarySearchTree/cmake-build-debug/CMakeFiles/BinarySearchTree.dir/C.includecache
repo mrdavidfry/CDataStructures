@@ -6,13 +6,3 @@
 
 #IncludeRegexTransform: 
 
-/homes/df4517/BinarySearchTree/BST.h
-stdbool.h
--
-
-/homes/df4517/BinarySearchTree/Main.c
-stdio.h
--
-BST.h
-/homes/df4517/BinarySearchTree/BST.h
-
