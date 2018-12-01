@@ -56,16 +56,51 @@ CMAKE_BINARY_DIR = /homes/df4517/CDataStructures/CSplayTree/cmake-build-debug
 #=============================================================================
 # Targets provided globally by CMake.
 
-# Special rule for the target rebuild_cache
-rebuild_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
-	/usr/lib/clion-2018.2.2/bin/cmake/linux/bin/cmake -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
-.PHONY : rebuild_cache
+# Special rule for the target install/strip
+install/strip: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
+	/usr/lib/clion-2018.2.2/bin/cmake/linux/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
+.PHONY : install/strip
 
-# Special rule for the target rebuild_cache
-rebuild_cache/fast: rebuild_cache
+# Special rule for the target install/strip
+install/strip/fast: preinstall/fast
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
+	/usr/lib/clion-2018.2.2/bin/cmake/linux/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
+.PHONY : install/strip/fast
 
-.PHONY : rebuild_cache/fast
+# Special rule for the target install/local
+install/local: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
+	/usr/lib/clion-2018.2.2/bin/cmake/linux/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+.PHONY : install/local
+
+# Special rule for the target install/local
+install/local/fast: preinstall/fast
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
+	/usr/lib/clion-2018.2.2/bin/cmake/linux/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+.PHONY : install/local/fast
+
+# Special rule for the target install
+install: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
+	/usr/lib/clion-2018.2.2/bin/cmake/linux/bin/cmake -P cmake_install.cmake
+.PHONY : install
+
+# Special rule for the target install
+install/fast: preinstall/fast
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
+	/usr/lib/clion-2018.2.2/bin/cmake/linux/bin/cmake -P cmake_install.cmake
+.PHONY : install/fast
+
+# Special rule for the target list_install_components
+list_install_components:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Available install components are: \"Unspecified\""
+.PHONY : list_install_components
+
+# Special rule for the target list_install_components
+list_install_components/fast: list_install_components
+
+.PHONY : list_install_components/fast
 
 # Special rule for the target edit_cache
 edit_cache:
@@ -77,6 +112,17 @@ edit_cache:
 edit_cache/fast: edit_cache
 
 .PHONY : edit_cache/fast
+
+# Special rule for the target rebuild_cache
+rebuild_cache:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
+	/usr/lib/clion-2018.2.2/bin/cmake/linux/bin/cmake -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+.PHONY : rebuild_cache
+
+# Special rule for the target rebuild_cache
+rebuild_cache/fast: rebuild_cache
+
+.PHONY : rebuild_cache/fast
 
 # The main all target
 all: cmake_check_build_system
@@ -122,6 +168,58 @@ CSplayTree: cmake_check_build_system
 CSplayTree/fast:
 	$(MAKE) -f CMakeFiles/CSplayTree.dir/build.make CMakeFiles/CSplayTree.dir/build
 .PHONY : CSplayTree/fast
+
+#=============================================================================
+# Target rules for targets named gmock_main
+
+# Build rule for target.
+gmock_main: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 gmock_main
+.PHONY : gmock_main
+
+# fast build rule for target.
+gmock_main/fast:
+	$(MAKE) -f googletest-build/googlemock/CMakeFiles/gmock_main.dir/build.make googletest-build/googlemock/CMakeFiles/gmock_main.dir/build
+.PHONY : gmock_main/fast
+
+#=============================================================================
+# Target rules for targets named gmock
+
+# Build rule for target.
+gmock: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 gmock
+.PHONY : gmock
+
+# fast build rule for target.
+gmock/fast:
+	$(MAKE) -f googletest-build/googlemock/CMakeFiles/gmock.dir/build.make googletest-build/googlemock/CMakeFiles/gmock.dir/build
+.PHONY : gmock/fast
+
+#=============================================================================
+# Target rules for targets named gtest_main
+
+# Build rule for target.
+gtest_main: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 gtest_main
+.PHONY : gtest_main
+
+# fast build rule for target.
+gtest_main/fast:
+	$(MAKE) -f googletest-build/googlemock/gtest/CMakeFiles/gtest_main.dir/build.make googletest-build/googlemock/gtest/CMakeFiles/gtest_main.dir/build
+.PHONY : gtest_main/fast
+
+#=============================================================================
+# Target rules for targets named gtest
+
+# Build rule for target.
+gtest: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 gtest
+.PHONY : gtest
+
+# fast build rule for target.
+gtest/fast:
+	$(MAKE) -f googletest-build/googlemock/gtest/CMakeFiles/gtest.dir/build.make googletest-build/googlemock/gtest/CMakeFiles/gtest.dir/build
+.PHONY : gtest/fast
 
 SplayTree.o: SplayTree.c.o
 
@@ -177,21 +275,89 @@ SplayTreeTests.c.s:
 	$(MAKE) -f CMakeFiles/CSplayTree.dir/build.make CMakeFiles/CSplayTree.dir/SplayTreeTests.c.s
 .PHONY : SplayTreeTests.c.s
 
+Tests/Main.o: Tests/Main.cpp.o
+
+.PHONY : Tests/Main.o
+
+# target to build an object file
+Tests/Main.cpp.o:
+	$(MAKE) -f CMakeFiles/CSplayTree.dir/build.make CMakeFiles/CSplayTree.dir/Tests/Main.cpp.o
+.PHONY : Tests/Main.cpp.o
+
+Tests/Main.i: Tests/Main.cpp.i
+
+.PHONY : Tests/Main.i
+
+# target to preprocess a source file
+Tests/Main.cpp.i:
+	$(MAKE) -f CMakeFiles/CSplayTree.dir/build.make CMakeFiles/CSplayTree.dir/Tests/Main.cpp.i
+.PHONY : Tests/Main.cpp.i
+
+Tests/Main.s: Tests/Main.cpp.s
+
+.PHONY : Tests/Main.s
+
+# target to generate assembly for a file
+Tests/Main.cpp.s:
+	$(MAKE) -f CMakeFiles/CSplayTree.dir/build.make CMakeFiles/CSplayTree.dir/Tests/Main.cpp.s
+.PHONY : Tests/Main.cpp.s
+
+Tests/SplayTreeTests.o: Tests/SplayTreeTests.cpp.o
+
+.PHONY : Tests/SplayTreeTests.o
+
+# target to build an object file
+Tests/SplayTreeTests.cpp.o:
+	$(MAKE) -f CMakeFiles/CSplayTree.dir/build.make CMakeFiles/CSplayTree.dir/Tests/SplayTreeTests.cpp.o
+.PHONY : Tests/SplayTreeTests.cpp.o
+
+Tests/SplayTreeTests.i: Tests/SplayTreeTests.cpp.i
+
+.PHONY : Tests/SplayTreeTests.i
+
+# target to preprocess a source file
+Tests/SplayTreeTests.cpp.i:
+	$(MAKE) -f CMakeFiles/CSplayTree.dir/build.make CMakeFiles/CSplayTree.dir/Tests/SplayTreeTests.cpp.i
+.PHONY : Tests/SplayTreeTests.cpp.i
+
+Tests/SplayTreeTests.s: Tests/SplayTreeTests.cpp.s
+
+.PHONY : Tests/SplayTreeTests.s
+
+# target to generate assembly for a file
+Tests/SplayTreeTests.cpp.s:
+	$(MAKE) -f CMakeFiles/CSplayTree.dir/build.make CMakeFiles/CSplayTree.dir/Tests/SplayTreeTests.cpp.s
+.PHONY : Tests/SplayTreeTests.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
 	@echo "... all (the default if no target is provided)"
 	@echo "... clean"
 	@echo "... depend"
-	@echo "... rebuild_cache"
-	@echo "... edit_cache"
+	@echo "... install/strip"
+	@echo "... install/local"
 	@echo "... CSplayTree"
+	@echo "... install"
+	@echo "... list_install_components"
+	@echo "... edit_cache"
+	@echo "... rebuild_cache"
+	@echo "... gmock_main"
+	@echo "... gmock"
+	@echo "... gtest_main"
+	@echo "... gtest"
 	@echo "... SplayTree.o"
 	@echo "... SplayTree.i"
 	@echo "... SplayTree.s"
 	@echo "... SplayTreeTests.o"
 	@echo "... SplayTreeTests.i"
 	@echo "... SplayTreeTests.s"
+	@echo "... Tests/Main.o"
+	@echo "... Tests/Main.i"
+	@echo "... Tests/Main.s"
+	@echo "... Tests/SplayTreeTests.o"
+	@echo "... Tests/SplayTreeTests.i"
+	@echo "... Tests/SplayTreeTests.s"
 .PHONY : help
 
 

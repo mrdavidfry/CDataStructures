@@ -7,11 +7,13 @@
 void InsertNodeAndRemoveTests ();
 void RotateTreeTest ();
 
+/*
 int main() {
   printf("Tests started\n");
   InsertNodeAndRemoveTests();
   RotateTreeTest ();
 }
+*/
 
 void InsertNodeAndRemoveTests () {
   struct SplayTree* tree = create_tree (15);

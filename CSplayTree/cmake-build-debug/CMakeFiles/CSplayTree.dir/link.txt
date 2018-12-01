@@ -1,1 +1,1 @@
-/usr/bin/cc -g   CMakeFiles/CSplayTree.dir/SplayTree.c.o CMakeFiles/CSplayTree.dir/SplayTreeTests.c.o  -o CSplayTree 
+/usr/bin/c++  -g   CMakeFiles/CSplayTree.dir/SplayTree.c.o CMakeFiles/CSplayTree.dir/SplayTreeTests.c.o CMakeFiles/CSplayTree.dir/Tests/Main.cpp.o CMakeFiles/CSplayTree.dir/Tests/SplayTreeTests.cpp.o  -o CSplayTree lib/libgtestd.a lib/libgtest_maind.a lib/libgtestd.a -lpthread 
