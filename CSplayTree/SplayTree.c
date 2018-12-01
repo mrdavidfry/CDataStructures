@@ -111,6 +111,10 @@ void insert(struct SplayTree *tree, unsigned int address) {
 /* Returns a ptr to the corresponding node if a given address is
    found in tree. Returns NULL otherwise.*/
 struct Node *find(struct SplayTree *tree, unsigned int address) {
+  if (!tree) {
+    return NULL;
+  }
+
   struct Node *cur_node = tree->root_node;
   unsigned int cur_address;
   while (cur_node) {

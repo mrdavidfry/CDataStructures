@@ -6,5 +6,5 @@ C_FLAGS = -g
 
 C_DEFINES = 
 
-C_INCLUDES = -I/home/dave/CSplayTree/. 
+C_INCLUDES = -I/homes/df4517/CDataStructures/CSplayTree/. 
 

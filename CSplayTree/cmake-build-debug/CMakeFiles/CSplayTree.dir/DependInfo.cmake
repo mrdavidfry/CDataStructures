@@ -4,8 +4,8 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_C
-  "/home/dave/CSplayTree/SplayTree.c" "/home/dave/CSplayTree/cmake-build-debug/CMakeFiles/CSplayTree.dir/SplayTree.c.o"
-  "/home/dave/CSplayTree/SplayTreeTests.c" "/home/dave/CSplayTree/cmake-build-debug/CMakeFiles/CSplayTree.dir/SplayTreeTests.c.o"
+  "/homes/df4517/CDataStructures/CSplayTree/SplayTree.c" "/homes/df4517/CDataStructures/CSplayTree/cmake-build-debug/CMakeFiles/CSplayTree.dir/SplayTree.c.o"
+  "/homes/df4517/CDataStructures/CSplayTree/SplayTreeTests.c" "/homes/df4517/CDataStructures/CSplayTree/cmake-build-debug/CMakeFiles/CSplayTree.dir/SplayTreeTests.c.o"
   )
 set(CMAKE_C_COMPILER_ID "GNU")
 

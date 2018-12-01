@@ -34,19 +34,19 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = /home/dave/Downloads/clion-2018.2.6/bin/cmake/linux/bin/cmake
+CMAKE_COMMAND = /usr/lib/clion-2018.2.2/bin/cmake/linux/bin/cmake
 
 # The command to remove a file.
-RM = /home/dave/Downloads/clion-2018.2.6/bin/cmake/linux/bin/cmake -E remove -f
+RM = /usr/lib/clion-2018.2.2/bin/cmake/linux/bin/cmake -E remove -f
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/dave/CSplayTree
+CMAKE_SOURCE_DIR = /homes/df4517/CDataStructures/CSplayTree
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/dave/CSplayTree/cmake-build-debug
+CMAKE_BINARY_DIR = /homes/df4517/CDataStructures/CSplayTree/cmake-build-debug
 
 # Include any dependencies generated for this target.
 include CMakeFiles/CSplayTree.dir/depend.make
@@ -59,29 +59,29 @@ include CMakeFiles/CSplayTree.dir/flags.make
 
 CMakeFiles/CSplayTree.dir/SplayTree.c.o: CMakeFiles/CSplayTree.dir/flags.make
 CMakeFiles/CSplayTree.dir/SplayTree.c.o: ../SplayTree.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/dave/CSplayTree/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/CSplayTree.dir/SplayTree.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/CSplayTree.dir/SplayTree.c.o   -c /home/dave/CSplayTree/SplayTree.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/homes/df4517/CDataStructures/CSplayTree/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/CSplayTree.dir/SplayTree.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/CSplayTree.dir/SplayTree.c.o   -c /homes/df4517/CDataStructures/CSplayTree/SplayTree.c
 
 CMakeFiles/CSplayTree.dir/SplayTree.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/CSplayTree.dir/SplayTree.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/dave/CSplayTree/SplayTree.c > CMakeFiles/CSplayTree.dir/SplayTree.c.i
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /homes/df4517/CDataStructures/CSplayTree/SplayTree.c > CMakeFiles/CSplayTree.dir/SplayTree.c.i
 
 CMakeFiles/CSplayTree.dir/SplayTree.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/CSplayTree.dir/SplayTree.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/dave/CSplayTree/SplayTree.c -o CMakeFiles/CSplayTree.dir/SplayTree.c.s
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /homes/df4517/CDataStructures/CSplayTree/SplayTree.c -o CMakeFiles/CSplayTree.dir/SplayTree.c.s
 
 CMakeFiles/CSplayTree.dir/SplayTreeTests.c.o: CMakeFiles/CSplayTree.dir/flags.make
 CMakeFiles/CSplayTree.dir/SplayTreeTests.c.o: ../SplayTreeTests.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/dave/CSplayTree/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object CMakeFiles/CSplayTree.dir/SplayTreeTests.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/CSplayTree.dir/SplayTreeTests.c.o   -c /home/dave/CSplayTree/SplayTreeTests.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/homes/df4517/CDataStructures/CSplayTree/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object CMakeFiles/CSplayTree.dir/SplayTreeTests.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/CSplayTree.dir/SplayTreeTests.c.o   -c /homes/df4517/CDataStructures/CSplayTree/SplayTreeTests.c
 
 CMakeFiles/CSplayTree.dir/SplayTreeTests.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/CSplayTree.dir/SplayTreeTests.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/dave/CSplayTree/SplayTreeTests.c > CMakeFiles/CSplayTree.dir/SplayTreeTests.c.i
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /homes/df4517/CDataStructures/CSplayTree/SplayTreeTests.c > CMakeFiles/CSplayTree.dir/SplayTreeTests.c.i
 
 CMakeFiles/CSplayTree.dir/SplayTreeTests.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/CSplayTree.dir/SplayTreeTests.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/dave/CSplayTree/SplayTreeTests.c -o CMakeFiles/CSplayTree.dir/SplayTreeTests.c.s
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /homes/df4517/CDataStructures/CSplayTree/SplayTreeTests.c -o CMakeFiles/CSplayTree.dir/SplayTreeTests.c.s
 
 # Object files for target CSplayTree
 CSplayTree_OBJECTS = \
@@ -95,7 +95,7 @@ CSplayTree: CMakeFiles/CSplayTree.dir/SplayTree.c.o
 CSplayTree: CMakeFiles/CSplayTree.dir/SplayTreeTests.c.o
 CSplayTree: CMakeFiles/CSplayTree.dir/build.make
 CSplayTree: CMakeFiles/CSplayTree.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/dave/CSplayTree/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking C executable CSplayTree"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/homes/df4517/CDataStructures/CSplayTree/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking C executable CSplayTree"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/CSplayTree.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -108,6 +108,6 @@ CMakeFiles/CSplayTree.dir/clean:
 .PHONY : CMakeFiles/CSplayTree.dir/clean
 
 CMakeFiles/CSplayTree.dir/depend:
-	cd /home/dave/CSplayTree/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/dave/CSplayTree /home/dave/CSplayTree /home/dave/CSplayTree/cmake-build-debug /home/dave/CSplayTree/cmake-build-debug /home/dave/CSplayTree/cmake-build-debug/CMakeFiles/CSplayTree.dir/DependInfo.cmake --color=$(COLOR)
+	cd /homes/df4517/CDataStructures/CSplayTree/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /homes/df4517/CDataStructures/CSplayTree /homes/df4517/CDataStructures/CSplayTree /homes/df4517/CDataStructures/CSplayTree/cmake-build-debug /homes/df4517/CDataStructures/CSplayTree/cmake-build-debug /homes/df4517/CDataStructures/CSplayTree/cmake-build-debug/CMakeFiles/CSplayTree.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/CSplayTree.dir/depend
 

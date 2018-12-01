@@ -1,0 +1,1 @@
+/usr/bin/cc -g   CMakeFiles/CDataStructures.dir/BinarySearchTree/BST.c.o CMakeFiles/CDataStructures.dir/BinarySearchTree/Main.c.o CMakeFiles/CDataStructures.dir/CSplayTree/SplayTree.c.o CMakeFiles/CDataStructures.dir/CSplayTree/SplayTreeTests.c.o  -o CDataStructures 

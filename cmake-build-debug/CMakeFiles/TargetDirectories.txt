@@ -1,0 +1,3 @@
+/homes/df4517/CDataStructures/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/homes/df4517/CDataStructures/cmake-build-debug/CMakeFiles/edit_cache.dir
+/homes/df4517/CDataStructures/cmake-build-debug/CMakeFiles/CDataStructures.dir
