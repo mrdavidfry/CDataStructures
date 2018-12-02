@@ -6,7 +6,11 @@
 
 #IncludeRegexTransform: 
 
-/homes/df4517/CDataStructures/CSplayTree/Tests/Main.cpp
+.././SplayTree.h
+stdbool.h
+-
+
+/homes/df4517/CDataStructures/CSplayTree/Tests/SplayTreeTests.cpp
 stdio.h
 -
 iostream
@@ -15,14 +19,8 @@ gtest/gtest.h
 -
 gmock/gmock.h
 -
-stdio.h
--
-iostream
--
-gtest/gtest.h
--
-gmock/gmock.h
--
+SplayTree.h
+/homes/df4517/CDataStructures/CSplayTree/Tests/SplayTree.h
 
 googletest-src/googlemock/include/gmock/gmock-actions.h
 errno.h

@@ -13,18 +13,19 @@ int main() {
   InsertNodeAndRemoveTests();
   RotateTreeTest ();
 }
-*/
+ */
 
 void InsertNodeAndRemoveTests () {
-  struct SplayTree* tree = create_tree (15);
-  assert (tree->root_node->address == 15);
+  struct SplayTree* tree = create_tree ();
+  assert (tree->root_node == NULL);
   if (!tree) {
     printf("Tree was not created.");
     return;
   }
+  insert_node(tree, 15);
 
   // Grandparent is NULL, add to left of parent insert case:
-  insert (tree, 14);
+  insert_node(tree, 14);
   assert (tree->root_node->address == 14);
   assert (tree->root_node->right_node->address == 15);
   assert (tree->root_node->parent_node == NULL);
@@ -32,7 +33,7 @@ void InsertNodeAndRemoveTests () {
   //print_tree(tree);
 
   // Zig-zig right side insert case:
-  insert (tree, 16);
+  insert_node (tree, 16);
   assert (tree->root_node->address == 16);
   assert (tree->root_node->left_node->address == 15);
   assert (tree->root_node->left_node->left_node->address == 14);
@@ -41,7 +42,7 @@ void InsertNodeAndRemoveTests () {
   //print_tree(tree-);
 
   // Zig-zig left side insert case
-  insert (tree, 10);
+  insert_node (tree, 10);
   assert (tree->root_node->address == 10);
   assert (tree->root_node->left_node == NULL);
   assert (tree->root_node->right_node->address == 16);
@@ -56,7 +57,7 @@ void InsertNodeAndRemoveTests () {
  //print_tree(tree);
 
   // Grandparent is NULL, add to left of parent insert case:
-  insert (tree, 9);
+  insert_node (tree, 9);
   assert (tree->root_node->address == 9);
   assert (tree->root_node->right_node->address == 10);
   assert (tree->root_node->left_node == NULL);
@@ -73,7 +74,7 @@ void InsertNodeAndRemoveTests () {
   //print_tree(tree);
 
   // Left then righted sided zig-zig cases:
-  insert (tree, 11);
+  insert_node (tree, 11);
   assert (tree->root_node->address == 11);
   assert (tree->root_node->right_node->address == 14);
   assert (tree->root_node->right_node->right_node->address == 16);
@@ -92,7 +93,7 @@ void InsertNodeAndRemoveTests () {
   //print_tree(tree);
 
   // Grandparent is NULL, add to left of parent insert case:
-  insert (tree, 8);
+  insert_node (tree, 8);
   assert (tree->root_node->address == 8);
   assert (tree->root_node->left_node == NULL);
   assert (tree->root_node->right_node->address == 11);
@@ -113,7 +114,7 @@ void InsertNodeAndRemoveTests () {
   //print_tree(tree);
 
   // Reinsert a node case:
-  insert (tree, 16);
+  insert_node (tree, 16);
 
   assert (tree->root_node->address == 16);
   assert (tree->root_node->right_node == NULL);
@@ -225,12 +226,12 @@ void InsertNodeAndRemoveTests () {
 
 void RotateTreeTest () {
   printf("-----------------------------\nRotated tests started\n");
-  struct SplayTree* tree = create_tree (15);
+  struct SplayTree* tree = create_tree ();
   if (!tree) {
     printf("Tree was not created.");
     return;
   }
-
+  insert_node(tree, 15);
   // Single node in tree rotate left case:
   struct Node *new_root = rotate_left(tree, tree->root_node);
   assert (new_root->address == 15);
@@ -243,13 +244,13 @@ void RotateTreeTest () {
   assert (tree->root_node->address == 15);
   assert (new_root->parent_node == NULL);
 
-  insert (tree, 14);
+  insert_node (tree, 14);
   assert (tree->root_node->address == 14);
   assert (tree->root_node->right_node->address == 15);
   assert (tree->root_node->parent_node == NULL);
 
   // Check tree has initially been built correctly:
-  insert (tree, 16);
+  insert_node (tree, 16);
   assert (tree->root_node->address == 16);
   assert (tree->root_node->right_node == NULL);
   assert (tree->root_node->left_node->address == 15);

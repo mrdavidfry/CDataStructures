@@ -22,15 +22,15 @@ struct SplayTree
 struct Node *rotate_left (struct SplayTree *tree, struct Node *subtree_root);
 struct Node *rotate_right (struct SplayTree *tree, struct Node *subtree_root);
 
-void insert (struct SplayTree *tree, unsigned int address);
-struct Node *find(struct SplayTree *tree, unsigned int address);
+void insert_node (struct SplayTree *tree, unsigned int address);
+struct Node *find_node(struct SplayTree *tree, unsigned int address);
 bool remove_address(struct SplayTree *tree, unsigned int address);
 struct Node *join(struct SplayTree *tree, struct Node *smaller_subtree, struct Node *larger_subtree);
 
 struct Node *get_min(struct Node* subtree_node);
 struct Node *get_max(struct Node* subtree_node);
 
-struct SplayTree *create_tree (unsigned int address);
+struct SplayTree *create_tree ();
 struct Node *create_node (unsigned int address, struct Node *parent_node);
 
 void splay_node (struct SplayTree *tree, struct Node *node);

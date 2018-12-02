@@ -70,12 +70,20 @@ struct Node *rotate_right(struct SplayTree *tree, struct Node *subtree_root) {
    Creates a new node and inserts the address into the tree if address
    is not already in the tree. If address is in the tree, then the
    corresponding node is splayed to the root. */
-void insert(struct SplayTree *tree, unsigned int address) {
+void insert_node(struct SplayTree *tree, unsigned int address) {
   assert (tree != NULL);
   // Insert new_node using binary search:
   struct Node *new_node = NULL;
   struct Node *cur_node = tree->root_node;
   struct Node *parent_node = NULL;
+
+  if (!cur_node) { // no root node
+    new_node = create_node(address, parent_node);
+    tree->root_node = new_node;
+    new_node->parent_node = NULL;
+    return;
+  }
+
   unsigned int cur_address;
   while (cur_node) {
     cur_address = cur_node->address;
@@ -110,7 +118,7 @@ void insert(struct SplayTree *tree, unsigned int address) {
 
 /* Returns a ptr to the corresponding node if a given address is
    found in tree. Returns NULL otherwise.*/
-struct Node *find(struct SplayTree *tree, unsigned int address) {
+struct Node *find_node(struct SplayTree *tree, unsigned int address) {
   if (!tree) {
     return NULL;
   }
@@ -133,7 +141,7 @@ struct Node *find(struct SplayTree *tree, unsigned int address) {
 /* Removes a given address in a tree, provided address is in tree. Returns true
    if successful, false otherwise. */
 bool remove_address(struct SplayTree *tree, unsigned int address) {
-  struct Node *corresponding_node = find(tree, address);
+  struct Node *corresponding_node = find_node(tree, address);
   if (!corresponding_node) { // corresponding node not found
     return false;
   }
@@ -278,15 +286,14 @@ struct Node *create_node(unsigned int address, struct Node *parent_node) {
   return new_node;
 }
 
-/* Creates and returns a new tree, malloced in memory, with the root node storing address. */
-struct SplayTree *create_tree(unsigned int address) {
+/* Creates and returns a new tree, malloced in memory. */
+struct SplayTree *create_tree() {
   struct SplayTree *tree = (struct SplayTree *) malloc(sizeof(struct SplayTree));
   if (!tree) {
     printf("In create_tree: Malloc failed!\n");
     return NULL;
   }
-  tree->root_node = create_node(address, NULL);
-  tree->stored_nodes = 1;
+  tree->root_node = NULL;
   return tree;
 }
 
